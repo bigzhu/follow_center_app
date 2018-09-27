@@ -20,7 +20,7 @@ class TabbedAppBarSample extends StatelessWidget {
                     // backgroundColor: Colors.white,
                     // title: const Text('Follow Center'),
                     title: Row(children: [
-                      Image.asset('assets/icon.png', fit: BoxFit.cover, alignment: Alignment.centerLeft)
+                      Image.asset('assets/logo.png', fit: BoxFit.cover, alignment: Alignment.centerLeft)
                     ]),
                     bottom: TabBar(
                         isScrollable: false,
