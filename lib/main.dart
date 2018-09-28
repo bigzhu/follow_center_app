@@ -8,19 +8,19 @@ class TabbedAppBarSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: new ThemeData(
-        // brightness: Brightness.light,
-        primaryColor: Colors.white, //Changing this will change the color of the TabBar
-        // accentColor: Colors.cyan[600],
-      ),
+        theme: new ThemeData(
+            // brightness: Brightness.light,
+            primaryColor: Colors.white, //Changing this will change the color of the TabBar
+            // accentColor: Colors.cyan[600],
+        ),
         home: DefaultTabController(
             length: choices.length,
             child: Scaffold(
                 appBar: AppBar(
-                    // backgroundColor: Colors.white,
                     // title: const Text('Follow Center'),
                     title: Row(children: [
-                      Image.asset('assets/logo.png', fit: BoxFit.cover, alignment: Alignment.centerLeft)
+                      Image.asset('assets/logo.png', fit: BoxFit.cover, alignment: Alignment.centerLeft), 
+                      Text('Follow Center'),
                     ]),
                     bottom: TabBar(
                         isScrollable: false,
@@ -84,24 +84,3 @@ class ChoiceCard extends StatelessWidget {
 void main() {
   runApp(TabbedAppBarSample());
 }
-
-/*
-   Sample Catalog
-
-   Title: Tabbed AppBar
-
-   Summary: An AppBar with a TabBar for navigating pages just below it.
-
-   Description:
-   A TabBar can be used to navigate among the pages displayed in a TabBarView.
-   Although a TabBar is an ordinary widget that can appear anywhere, it's most often
-   included in the application's AppBar.
-
-   Classes: AppBar, DefaultTabController, TabBar, Scaffold, TabBarView
-
-   Sample: TabbedAppBarSample
-
-   See also:
-   - The "Components-Tabs" section of the material design specification:
-   <https://material.io/go/design-tabs>
-   */
