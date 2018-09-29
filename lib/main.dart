@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_html_view/flutter_html_view.dart';
+import 'ui/message.dart';
 
 class TabbedAppBarSample extends StatelessWidget {
   @override
@@ -27,7 +27,6 @@ class TabbedAppBarSample extends StatelessWidget {
                         tabs: choices.map((Choice choice) {
                           return Tab(
                               text: choice.title,
-                              // icon: Icon(choice.icon),
                           );
                         }).toList(),
                     ),
@@ -36,7 +35,7 @@ class TabbedAppBarSample extends StatelessWidget {
                     children: choices.map((Choice choice) {
                       return Padding(
                           padding: const EdgeInsets.all(16.0),
-                          child: ChoiceCard(choice: choice),
+                          child: ChoiceCard(),
                       );
                     }).toList(),
                 ),
@@ -47,39 +46,14 @@ class TabbedAppBarSample extends StatelessWidget {
 }
 
 class Choice {
-  const Choice({ this.title, this.icon });
+  const Choice({ this.title});
   final String title;
-  final IconData icon;
 }
 
 const List<Choice> choices = <Choice>[
   Choice(title: '首页'),
   Choice(title: '寻他'),
 ];
-
-class ChoiceCard extends StatelessWidget {
-  ChoiceCard({ Key key, this.choice }) : super(key: key);
-  final Choice choice;
-  String html = '<h1>This is heading 1</h1> <h2>This is heading 2</h2><h3>This is heading 3</h3><h4>This is heading 4</h4><h5>This is heading 5</h5><h6>This is heading 6</h6><p><img alt="Test Image" src="https://i.ytimg.com/vi/RHLknisJ-Sg/maxresdefault.jpg" /></p>';
-  @override
-  Widget build(BuildContext context) {
-    final TextStyle textStyle = Theme.of(context).textTheme.display1;
-    return Card(
-        color: Colors.white,
-        child: Center(
-            child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  HtmlView(data: html),
-                  Icon(choice.icon, size: 128.0, color: textStyle.color),
-                  Text(choice.title, style: textStyle),
-                ],
-            ),
-        ),
-    );
-  }
-}
 
 void main() {
   runApp(TabbedAppBarSample());
