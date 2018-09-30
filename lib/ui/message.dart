@@ -5,18 +5,10 @@ import '../models/message.dart';
 import 'card_bar.dart';
 
 class Message extends StatelessWidget {
-  InfluencerSocialModel influencerSocial = InfluencerSocialModel(
-      avatar:'https://s18.postimg.cc/l3tv0a4af/VTSJ5m_Rt_400x400.jpg?dl=1',
-      socialName: 'geo',
-      social: 'twitter',
-  );
-  MessageModel message = MessageModel(
-      text: 'Long day https://t.co/v8UCHqfDCY',
-      medias: [
-        'https://follow.bigzhu.net/medias/CharlesHoskinson/twitter/DoLPBfAXsAAdlM5.jpg',
-        'https://follow.bigzhu.net/medias/CharlesHoskinson/twitter/DoLPBfDWsAAC0rY.jpg'
-      ],
-  );
+  Message({ Key key, this.influencerSocial, this.message }) : super(key: key);
+  final InfluencerSocialModel influencerSocial;
+  final MessageModel message;
+
   // 存放 card 里面要显示的内容
   List<Widget> cardWidgets = <Widget>[];
 
