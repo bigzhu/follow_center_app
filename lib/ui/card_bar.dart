@@ -8,8 +8,8 @@ class CardBar extends StatelessWidget{
   Widget build(BuildContext context) {
     return Row(
         children: [
-          new Expanded(
-              child: new Row(
+           Expanded(
+              child:  Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     CircleAvatar(
@@ -24,8 +24,8 @@ class CardBar extends StatelessWidget{
                   ],
               ),
           ),
-          new Text('一天前'),
-          new Icon(
+           Text('一天前'),
+           Icon(
               Icons.android,
               color: Colors.grey[600],
           ),
