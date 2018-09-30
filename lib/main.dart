@@ -35,7 +35,7 @@ class TabbedAppBarSample extends StatelessWidget {
                     children: choices.map((Choice choice) {
                       return Padding(
                           padding: const EdgeInsets.all(16.0),
-                          child: ChoiceCard(),
+                          child: Message(),
                       );
                     }).toList(),
                 ),

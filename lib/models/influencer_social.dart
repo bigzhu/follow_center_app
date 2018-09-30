@@ -1,4 +1,4 @@
-class InfluencerSocial {
+class InfluencerSocialModel {
   int id;
   String social;
   String socialName;
@@ -11,7 +11,7 @@ class InfluencerSocial {
   String errorInfo;
   String outId;
 
-  InfluencerSocial(
+  InfluencerSocialModel(
       {this.id,
       this.social,
       this.socialName,
@@ -24,7 +24,7 @@ class InfluencerSocial {
       this.errorInfo,
       this.outId});
 
-  InfluencerSocial.fromJson(Map<String, dynamic> json) {
+  InfluencerSocialModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     social = json['social'];
     socialName = json['social_name'];

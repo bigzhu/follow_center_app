@@ -1,4 +1,4 @@
-class Message {
+class MessageModel {
   int id;
   String outId;
   String social;
@@ -12,7 +12,7 @@ class Message {
   int influencerId;
   int anki;
 
-  Message(
+  MessageModel(
       {this.id,
       this.outId,
       this.social,
@@ -26,7 +26,7 @@ class Message {
       this.influencerId,
       this.anki});
 
-  Message.fromJson(Map<String, dynamic> json) {
+  MessageModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     outId = json['out_id'];
     social = json['social'];

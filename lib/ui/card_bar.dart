@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CardBar extends StatelessWidget{
   const CardBar({ Key key, this.influencerSocial }) : super(key: key);
-  final InfluencerSocial influencerSocial;
+  final InfluencerSocialModel influencerSocial;
   @override
   Widget build(BuildContext context) {
     return Row(
