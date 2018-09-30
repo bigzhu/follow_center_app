@@ -25,8 +25,14 @@ class ChoiceCard extends StatelessWidget {
     cardWidgets.add(CardBar(influencerSocial: influencerSocial));
     cardWidgets.add(Text(message.text));
     for (var i = 0; i < message.medias.length; i++)  {
-      cardWidgets.add(Image.network(message.medias[i]));
+      cardWidgets.add(
+          Padding(
+              padding:  EdgeInsets.only(bottom: 8.0),
+              child:  Image.network(message.medias[i]),
+          )
+      );
     }
+
     return Card( 
         child: Center(
             child: Column(
@@ -37,4 +43,3 @@ class ChoiceCard extends StatelessWidget {
         ));
   }
 }
-
