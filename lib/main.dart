@@ -31,6 +31,7 @@ class TabbedAppBarSample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<MessageModel> messages = [message, message2];
     return MaterialApp(
         theme: new ThemeData(
             // brightness: Brightness.light,
@@ -58,7 +59,7 @@ class TabbedAppBarSample extends StatelessWidget {
                     children: choices.map((Choice choice) {
                       return Padding(
                           padding: const EdgeInsets.all(16.0),
-                          child: Messages(influencerSocial:influencerSocial, messages:[message, message2]),
+                          child: Messages(influencerSocial:influencerSocial, messages:messages),
                       );
                     }).toList(),
                 ),
